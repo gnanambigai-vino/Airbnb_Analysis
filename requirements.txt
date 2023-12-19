@@ -4,3 +4,4 @@ Pillow
 streamlit-option-menu
 pymongo
 plotly-express
+matplotlib
