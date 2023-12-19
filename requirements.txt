@@ -1,0 +1,6 @@
+pandas  
+streamlit
+Pillow
+streamlit-option-menu
+pymongo
+plotly-express
