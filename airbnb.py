@@ -10,7 +10,7 @@ import pymongo
 #warnings.filterwarnings('ignore')
 
 # SETTING PAGE CONFIGURATIONS
-icon = Image.open(r"C:/Users/GVJai/Desktop/Project/Airbnb/airbnb.png")
+icon = Image.open("airbnb.png")
 st.set_page_config(page_title= "AirBnb-Analysis",
                    page_icon= icon,
                    layout= "wide",
@@ -42,7 +42,7 @@ if selected == "Home":
 
     with col2:
       with col2:
-        image = Image.open(r"C:/Users/GVJai/Desktop/Project/Airbnb/air_img.png")
+        image = Image.open("air_img.png")
         st.image(image, caption='Airbnb', use_column_width=True)
 
 #Bridging a connection with MongoDB Atlas and Creating a new database(youtube_data)
