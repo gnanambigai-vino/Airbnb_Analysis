@@ -119,8 +119,15 @@ if selected == "Explore Data":
                             yaxis=dict(title="Neighbourhood", titlefont=dict(size=20)))
     st.plotly_chart(data1, use_container_width=True)
 
+    #Display the scatter plot using Streamlit
+    st.plotly_chart(data1, use_container_width=True)
     with st.expander("Room Availability and Price Details"):
-        st.write(filtered_df.iloc[:500, 1:20:2].style.background_gradient(cmap="Oranges"))
+        selected_columns = ["neighbourhood", "neighbourhood_group", "price","room_type", "availability_365",  "minimum_nights"]
+
+        # Reset the index if needed
+        filtered_df_reset = filtered_df.reset_index(drop=True)
+
+        st.write(filtered_df_reset[selected_columns].iloc[:500, :].style.background_gradient(cmap="Oranges"))
 
     # Download orginal DataSet
     csv = df.to_csv(index=False).encode('utf-8')
